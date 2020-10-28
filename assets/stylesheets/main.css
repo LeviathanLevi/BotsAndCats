@@ -129,7 +129,7 @@ body {
   background: #fff;
   padding: 66px 0 44px 0;
 }
-.row-alt {
+.row-alt-about {
    background: #cbe2c1;
    background: -webkit-linear-gradient(to right, #92d4cc, #f6f1d3);
    background: -moz-linear-gradient(to right, #92d4cc, #f6f1d3);
@@ -138,6 +138,14 @@ body {
    margin-top: 75px;
    margin-bottom: 75px;
  }
+ .row-alt {
+  background: #cbe2c1;
+  background: -webkit-linear-gradient(to right, #92d4cc, #f6f1d3);
+  background: -moz-linear-gradient(to right, #92d4cc, #f6f1d3);
+  background: linear-gradient(to right, #92d4cc, #f6f1d3);
+  padding: 44px 0 22px 0;
+  margin-top: 75px;
+}
 
 /*
 	================================
