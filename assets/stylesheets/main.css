@@ -80,21 +80,28 @@ body {
   padding-right: 30px;
 }
 .grid,
-.col-1-3,
-.col-2-3 {
+.col-1,
+.col-2 {
   padding-left: 15px;
   padding-right: 15px;
 }
-.col-1-3,
-.col-2-3 {
+.col-1,
+.col-2 {
 	display: inline-block;
 	vertical-align: top;
 }
-.col-1-3 {
-  width: 33.33%;
+.col-1 {
+  width: 65%;
 }
-.col-2-3 {
-  width: 66.66%;
+.col-2 {
+  width: 35%;
+}
+
+.momentum {
+  width: 50%;
+}
+.momentum {
+  width: 50%;
 }
 
 /*
@@ -372,7 +379,7 @@ p a.aboutLink{
 
 /*
   ========================================
-  Speakers
+  Mean Reversion
   ========================================
 */
   
@@ -394,6 +401,14 @@ p a.aboutLink{
   vertical-align: top;
 }
 
+.meanReversionPicture {
+  width: 100%;
+  height: auto;
+}
+
+.indentedParagraphs {
+  text-indent: 40px;
+}
 
 /*
   ========================================

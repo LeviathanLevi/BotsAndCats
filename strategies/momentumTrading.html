@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>#1 Mean Reversion - BotsAndCats</title>
+	<title>#2 Momentum - BotsAndCats</title>
 	<link rel="stylesheet" href="../assets/stylesheets/main.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;700&display=swap"
 		rel="stylesheet">
@@ -37,9 +37,9 @@
 	<section class="row-alt">
 		<div class="lead container">
 
-			<h1>#1 Mean Reversion</h1>
+			<h1>#2 Momentum</h1>
 
-			<p>This strategy trades on the assumption that the price will return back to the mean or average price.</p>
+			<p>This strategy attempts to ride the waves of the market and buy/sell out when it detects a shift in momentum.</p>
 
 		</div>
 	</section>
@@ -50,21 +50,15 @@
 			<!-- Summary -->
 			<section class="speaker">
 
-				<div class="col-2">
-					<p class="indentedParagraphs">Mean reversion works off a simple concept, regression to the mean.
-						Regression to the mean is a phenomon that states that when a sample point is an extreme outlier
-						the future points will be closer to the mean/average.</p>
-					<p class="indentedParagraphs">Take a look at the photo on the right, the blue line is a rough
-						estimate of the mean of these prices. When a commodity's value strays from that average you
-						could make a bet that it will likely return to the mean at some point in the future.</p>
-					<p class="indentedParagraphs">While there are many ways to trade with mean reversion so the most
-						simplist you can probably imagine is to buy the commodity when it drops significantly below the
-						mean, and sell when it rises significantly above the mean.</p>
+				<div class="col-2 momentum">
+					<p class="indentedParagraphs">Momentum trading is often viewed as being thrown around by every push and pull of the market. A bot needs to react quickly and reflexively when the market signals a shift.</p>
+					<p class="indentedParagraphs">Say for example a commodity rises 1% in price, the bot could interpret this as as a momentum shift. The bot would buy in to ride the momentum up, once it buys in it can set a stop loss of say for example .5% and sell whenever the commodity drops .5% from it's peak.</p>
+					<p class="indentedParagraphs">Repeating this process cyclically could net a fair amount of profits if the commidity is volatile enough to swing up and down. Tuning the trailing stop order amount and buy in amounts is what will determine the success or failure of the bot.</p>
 				</div><!--
-				--><aside class="col-1">
+				--><aside class="col-1 momentum">
 
 					<div class="meanReversionPicture">
-						<img src="../assets/images/meanReversionGraph.png" alt="Graph with the mean">
+						<img src="../assets/images/catJumping.gif" alt="Graph with the mean">
 					</div>
 
 				</aside>

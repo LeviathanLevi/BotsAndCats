@@ -1,101 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Mike Dum Conference</title>
-		<link rel="stylesheet" href="assets/stylesheets/main.css">
-		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;700&display=swap" rel="stylesheet">
-		<link rel="shortcut icon" href="game/TemplateData/favicon.ico">
-		<link rel="stylesheet" href="game/TemplateData/style.css">
-		<script src="game/TemplateData/UnityProgress.js"></script>
-		<script src="game/Build/UnityLoader.js"></script>
-		<script>
-		  var unityInstance = UnityLoader.instantiate("unityContainer", "game/Build/game test 1.json", {onProgress: UnityProgress});
-		</script>
-	</head>
-	
-	<body>
-	
-		<!-- Header -->
-		<header class="primary-header container group">
-			
-			<h1 class="logo">
-				<a href="index.html">Bots and Cats</a>
-			</h1>
-		
-			<h3 class="tagline">Five common trading bot strategies explained. Plus cats!</h3>
-			
-			<nav class="nav primary-nav">
-			  <ul>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>BotsAndCats</title>
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="game/TemplateData/favicon.ico">
+	<link rel="stylesheet" href="game/TemplateData/style.css">
+	<script src="game/TemplateData/UnityProgress.js"></script>
+	<script src="game/Build/UnityLoader.js"></script>
+	<script>
+		var unityInstance = UnityLoader.instantiate("unityContainer", "game/Build/game test 1.json", { onProgress: UnityProgress });
+	</script>
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header class="primary-header container group">
+
+		<h1 class="logo">
+			<a href="index.html">Bots and Cats</a>
+		</h1>
+
+		<h3 class="tagline">Five common trading bot strategies explained. Plus cats!</h3>
+
+		<nav class="nav primary-nav">
+			<ul>
 				<li><a href="index.html">Home</a></li><!--
 				--><li><a href="./strategies/meanReversion.html">Mean Reversion</a></li><!--
 				--><li><a href="./strategies/momentumTrading.html">Momentum</a></li><!--
 				--><li><a href="./strategies/arbitrage.html">Arbitrage</a></li><!--
 				--><li><a href="./strategies/naiveBayes.html">Naïve Bayes</a></li><!--
 				--><li><a href="./strategies/naturalLanguageProcessing.html">NLP</a></li>
-			  </ul>
-			</nav>
+			</ul>
+		</nav>
 
-		</header>
-		
-		<!-- Hero with button for registering -->
-		<section class="hero container">
-		
-			<h2>Five common bot trading strategies explained.</h2>
-			
-			<p>This site will give a summary of five different bot trading strategies, mean reversion, momentum trading, arbitrage, naïve bayes, and natural language processing. These strategies are applicable to both crypto markets and tradition markets. Click the begin button to begin learning in order, or use the navigation menu in the top right to skip to one.</p>
-			
-			<section>
-				<img src="assets/images/flyingCats.jpg" alt="Flying cats">
-			</section>
-					
-			<a href="strategies/meanReversion.html" class="btn btn-alt">begin learning!</a>
-		
+	</header>
+
+	<!-- Home body with begin learning button -->
+	<section class="hero container">
+
+		<h2>Five common bot trading strategies explained.</h2>
+
+		<p>This site will give a summary of five different bot trading strategies, mean reversion, momentum trading,
+			arbitrage, naïve bayes, and natural language processing. These strategies are applicable to both crypto
+			markets and tradition markets. Click the begin button to begin learning in order, or use the navigation menu
+			in the top right to skip to one.</p>
+
+		<section>
+			<img src="assets/images/flyingCats.jpg" alt="Flying cats">
 		</section>
-		
-		<section class="game">
-			<h2>An unrelated Unity webGL game</h2>
-			<div class="webgl-content">
-			  <div id="unityContainer" style="width: 850px; height: 540px"></div>
-			  <div class="footer">
+
+		<a href="strategies/meanReversion.html" class="btn btn-alt">begin learning!</a>
+
+	</section>
+
+	<section class="game">
+		<h2>An unrelated Unity webGL game</h2>
+		<div class="webgl-content">
+			<div id="unityContainer" style="width: 850px; height: 540px"></div>
+			<div class="footer">
 				<div class="webgl-logo"></div>
 				<div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-			  </div>
 			</div>
-			
-			<section class="collage">
-				<h2>An unrelated collage made with Javascript</h2>
-				<canvas></canvas>
-			</section>
+		</div>
+
+		<section class="collage">
+			<h2>An unrelated collage made with Javascript</h2>
+			<canvas></canvas>
 		</section>
-		
-		
-		
-		<!-- Footer -->
-		<footer class="primary-footer container group">
-		
-		  <small>BotsAndCats&copy;</small>
-		  
-			<nav class="nav">
-			  <ul>
+	</section>
+
+
+
+	<!-- Footer -->
+	<footer class="primary-footer container group">
+
+		<small>BotsAndCats&copy;</small>
+
+		<nav class="nav">
+			<ul>
 				<li><a href="index.html">Home</a></li><!--
 				--><li><a href="./strategies/meanReversion.html">Mean Reversion</a></li><!--
 				--><li><a href="./strategies/momentumTrading.html">Momentum</a></li><!--
 				--><li><a href="./strategies/arbitrage.html">Arbitrage</a></li><!--
 				--><li><a href="./strategies/naiveBayes.html">Naïve Bayes</a></li><!--
 				--><li><a href="./strategies/naturalLanguageProcessing.html">NLP</a></li>
-			  </ul>
-			</nav>
-		  
-		  <section class="hero">
+			</ul>
+		</nav>
+
+		<section class="hero">
 			<a class="about" href="about.html">About</a>
-		  </section> 
-		  
-		</footer>
-		
-		<script defer src="scripts/collage.js"></script>
-	
-	</body>
+		</section>
+
+	</footer>
+
+	<script defer src="scripts/collage.js"></script>
+
+</body>
+
 </html>
