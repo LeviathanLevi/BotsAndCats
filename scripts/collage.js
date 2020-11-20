@@ -1,4 +1,3 @@
-
 // setup canvas
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
@@ -16,20 +15,20 @@ function Shape(x, y, color, size) {
 
 //Ball:
 function Ball(x, y, velX, velY, color, size) {
-	Shape.call(this, x, y, color, size);
-	this.velX = velX;
-	this.velY = velY;
+  Shape.call(this, x, y, color, size);
+  this.velX = velX;
+  this.velY = velY;
 }
 
 //Ball Inheritance
-Ball.prototype.draw = function() {
+Ball.prototype.draw = function () {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
 }
 
-Ball.prototype.update = function() {
+Ball.prototype.update = function () {
   if ((this.x + this.size) >= width) {
     this.velX = -(this.velX);
   }
@@ -50,7 +49,7 @@ Ball.prototype.update = function() {
   this.y += this.velY;
 }
 
-Ball.prototype.collisionDetect = function() {
+Ball.prototype.collisionDetect = function () {
   for (let j = 0; j < balls.length; j++) {
     if (!(this === balls[j])) {
       const dx = this.x - balls[j].x;
@@ -58,7 +57,7 @@ Ball.prototype.collisionDetect = function() {
       const distance = Math.sqrt(dx * dx + dy * dy);
 
       if (distance < this.size + balls[j].size) {
-        balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+        balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) + ')';
       }
     }
   }
@@ -66,31 +65,31 @@ Ball.prototype.collisionDetect = function() {
 
 //Evil ball:
 function EvilBall(x, y, size) {
-	Shape.call(this, x, y, 'rgb(0,0,0)', size);
-	this.outLineColor = 'rgb(255,0,0)';
+  Shape.call(this, x, y, 'rgb(0,0,0)', size);
+  this.outLineColor = 'rgb(255,0,0)';
 }
 
 //Ball Inheritance
-EvilBall.prototype.collisionDetect = function() {
+EvilBall.prototype.collisionDetect = function () {
   for (let j = 0; j < balls.length; j++) {
-		const dx = this.x - balls[j].x;
-		const dy = this.y - balls[j].y;
-		const distance = Math.sqrt(dx * dx + dy * dy);
+    const dx = this.x - balls[j].x;
+    const dy = this.y - balls[j].y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
 
-		if (distance < this.size + balls[j].size) {
-			balls.splice(j,1);
-		}
-	}
+    if (distance < this.size + balls[j].size) {
+      balls.splice(j, 1);
+    }
+  }
 }
 
-EvilBall.prototype.draw = function() {
+EvilBall.prototype.draw = function () {
   ctx.beginPath();
   ctx.fillStyle = this.outLineColor;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
   ctx.beginPath();
   ctx.fillStyle = this.color;
-  ctx.arc(this.x, this.y, this.size/2, 0, 2 * Math.PI);
+  ctx.arc(this.x, this.y, this.size / 2, 0, 2 * Math.PI);
   ctx.fill();
 }
 
@@ -108,7 +107,7 @@ function loop() {
   for (let i = 0; i < balls.length; i++) {
     balls[i].draw();
     balls[i].update();
-	balls[i].collisionDetect();
+    balls[i].collisionDetect();
   }
   evilBall.draw();
   evilBall.collisionDetect();
@@ -118,18 +117,18 @@ function loop() {
 
 //Begin program:
 let balls = [];
-let evilBall = new EvilBall(random(30, window.innerWidth-30), random(30, window.innerHeight-30), random(20, 30));
+let evilBall = new EvilBall(random(30, window.innerWidth - 30), random(30, window.innerHeight - 30), random(20, 30));
 
 while (balls.length < 25) {
-  let size = random(10,20);
+  let size = random(10, 20);
   let ball = new Ball(
     // ball position always drawn at least one ball width
     // away from the edge of the canvas, to avoid drawing errors
-    random(0 + size,width - size),
-    random(0 + size,height - size),
-    random(-7,7),
-    random(-7,7),
-    'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
+    random(0 + size, width - size),
+    random(0 + size, height - size),
+    random(-7, 7),
+    random(-7, 7),
+    'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) + ')',
     size
   );
 
